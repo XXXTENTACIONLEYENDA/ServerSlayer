@@ -1,0 +1,28 @@
+name: ServerSlayer
+description: The ultimate development server killer. Safely detects and kills stray local servers.
+version: 1.0.0
+permissions:
+  - active_terminal_access
+  - file_system_read
+slash_commands:
+  - name: killservers
+    description: Kill development servers based on scope and options.
+    usage: /killservers [--scope=project|chat|system] [--idle-only] [--force] [--dry-run]
+  - name: nukeports
+    description: Aggressively clear ports (alias for killservers --force).
+    usage: /nukeports [--scope=project|chat|system]
+  - name: clearports
+    description: Clear specific or all development ports.
+    usage: /clearports [--scope=project|system]
+  - name: killport
+    description: Kill the process listening on a specific port.
+    usage: /killport <port> [--force]
+  - name: listports
+    description: List all detected development ports and their status.
+    usage: /listports
+  - name: detectservers
+    description: Analyze the current project and report likely running servers.
+    usage: /detectservers
+system_prompt: system_instructions.md
+tools:
+  - tools/server_slayer_tools.py

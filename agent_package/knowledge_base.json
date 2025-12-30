@@ -1,0 +1,61 @@
+{
+  "frameworks": {
+    "node": {
+      "default_ports": [3000, 3001, 8000, 8080],
+      "detection_files": ["package.json"],
+      "process_names": ["node", "npm", "yarn", "pnpm", "bun"]
+    },
+    "python_django": {
+      "default_ports": [8000],
+      "detection_files": ["manage.py", "requirements.txt", "pyproject.toml"],
+      "process_names": ["python", "python3"]
+    },
+    "python_flask": {
+      "default_ports": [5000],
+      "detection_files": ["app.py", "wsgi.py", "requirements.txt"],
+      "process_names": ["python", "python3", "flask"]
+    },
+    "python_fastapi": {
+      "default_ports": [8000],
+      "detection_files": ["main.py", "requirements.txt"],
+      "process_names": ["python", "python3", "uvicorn", "gunicorn"]
+    },
+    "ruby_rails": {
+      "default_ports": [3000],
+      "detection_files": ["Gemfile", "config.ru"],
+      "process_names": ["ruby", "rails", "puma"]
+    },
+    "java_springboot": {
+      "default_ports": [8080],
+      "detection_files": ["pom.xml", "build.gradle"],
+      "process_names": ["java", "mvn", "gradle", "tomcat"]
+    },
+    "php": {
+      "default_ports": [8000],
+      "detection_files": ["composer.json", "index.php"],
+      "process_names": ["php", "apache2", "httpd", "nginx"]
+    },
+    "go": {
+      "default_ports": [8080],
+      "detection_files": ["go.mod"],
+      "process_names": ["go", "main"]
+    },
+    "dotnet": {
+      "default_ports": [5000, 5001],
+      "detection_files": ["*.csproj", "*.sln"],
+      "process_names": ["dotnet"]
+    },
+    "rust": {
+      "default_ports": [8080, 3000],
+      "detection_files": ["Cargo.toml"],
+      "process_names": ["cargo", "rustc"]
+    }
+  },
+  "protected_ports": [
+    3306, 5432, 27017, 6379, 1433, 22
+  ],
+  "protected_process_names": [
+    "antigravity", "Antigravity", "gemini", "cursor", "vscode", "code", "jetbrains",
+    "docker", "postgres", "mysqld", "mongod", "redis-server", "sqlservr", "ngrok", "ssh", "openvpn"
+  ]
+}
